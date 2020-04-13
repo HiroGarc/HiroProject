@@ -9,6 +9,32 @@
 //import 'react-native-gesture-handler';
 
 
+import React from 'react';
+import {View, Text, StyleSheet} from 'react-native';
+
+//import Form from './componentes/Form';
+import Routes from './routes';
+
+export default function App() {
+  return <Routes />;
+}
+
+const styles = StyleSheet.create({
+  color: {
+    backgroundColor: '#111',
+  },
+});
+
+//comentei o código abaixo por que está muito confuso.
+/*
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @ format
+ * @ flow strict-local
+ *
+//import 'react-native-gesture-handler';
 import React, { Component } from 'react';
 import {
   SafeAreaView,
@@ -20,8 +46,6 @@ import {
   //ImageBackground,
 } from 'react-native';
 // import Login from './Src/Paginas/Login';
-
-
  
   // import * as React from 'react';
   // import { View, Text,StyleSheet } from 'react-native';
@@ -46,8 +70,6 @@ import {
   
           render (){
             return(
-
-
         <View style={styles.Container}>
             
              <Login/>
@@ -61,7 +83,7 @@ import {
             <Stack.Screen name="Login" component={Login} />
             
             </Stack.Navigator>
-            </NavigationContainer> */}
+            </NavigationContainer> *}
             </View>
       );
       
@@ -80,108 +102,36 @@ import {
     });
   
     
-
-
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// render(){
-//         return(
-//            <View style={styles.Container}>
+ render(){
+         return(
+            <View style={styles.Container}>
             
-//              <Login/>
-//            {/* <ImageBackground source={require('./Src/assets/fundo1.png')} style={styles.imagen}></ImageBackground>  */}
-
+              <Login/>
+           { <ImageBackground source={require('./Src/assets/fundo1.png')} style={styles.imagen}></ImageBackground>  }
               
-
-
-//            </View>
-
-
-
-
-//         );
+            </View>
+       );
       
       
-//       }
+     }
   
-// }
-
-//     const styles = StyleSheet.create({
-//     Container: {
-//     backgroundColor:'#3e3f8f',
-//     flex:1,
-//     alignItems: 'center',
-//     justifyContent: 'center',
-
-//   },
+}
+   const styles = StyleSheet.create({
+   Container: {
+   backgroundColor:'#3e3f8f',
+   flex:1,
+   alignItems: 'center',
+  justifyContent: 'center',
+ },
  
-//   // imagen:{
-//   //   flex:1,
-    
-//   //   width:'100%',
-//   //   height:'100%',
+imagen:{
+  flex:1,
+     width:'100%',
+ height:'100%',
       
       
-//   // }
-
-// });
-
-
-
-
-
-
-
+}
+});
+*/
 
