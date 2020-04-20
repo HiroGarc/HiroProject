@@ -17,39 +17,47 @@ import {
 
 
 
-export default class FormRegister extends Component{
+export default function FormRegister () {
     
     
-    render(){
     
     
-        return(
-  <View style = { styles.FormRegister}>
+    
+                  return(
+                <View style = { styles.Container}>
       
-      <Text style={styles.header}> Registo</Text>
+                    <Text style={styles.header}> Registo</Text>
    
-	<TextInput style={styles.caixaDeEntradaTexto} placeholder="digite seu nome"
-	  underlineColorAndroid={'transaparent'}/>
+	              <TextInput style={styles.caixaDeEntradaTexto} placeholder="digite seu nome"
+	              underlineColorAndroid={'transaparent'}/>
 	
-	<TextInput 
-           style={styles.caixaDeEntradaTexto} placeholder="digite seu email"
-	  underlineColorAndroid={'transaparent'}/>
+            	  <TextInput 
+                style={styles.caixaDeEntradaTexto} placeholder="digite seu email"
+	              underlineColorAndroid={'transaparent'}/>
 	
-           <TextInput 
-           style={styles.caixaDeEntradaTexto} placeholder="digite seu cidade"
-	        underlineColorAndroid={'transaparent'}/>
-             <TouchableOpacity style={styles.button}>
-	         <Text style={styles.botaoteste}> Sign up </Text>
-           </TouchableOpacity>
+                <TextInput 
+                style={styles.caixaDeEntradaTexto} placeholder="digite seu cidade"
+	              underlineColorAndroid={'transaparent'}/>
+                <TouchableOpacity style={styles.button}>
+	              <Text style={styles.botaoteste}> Sign up </Text>
+                 </TouchableOpacity>
            
            </View>
             );
-        }
+        
     }
 
-const styles = stylesheet.create({
-	FormRegister:{
-	alignSelf:'strech',
+const styles = StyleSheet.create({
+	Container:{
+    flex:1,
+  backgroundColor:"#36485f",
+  alignSelf:'stretch',
+  //backgroundColor:"#3e3f8f",
+  //flex:1,
+  alignItems: 'center',
+  justifyContent: 'center',
+
+  //backgroundColor:"#3e3f8f",
 },
 
   header:{
@@ -57,17 +65,25 @@ const styles = stylesheet.create({
 	color:'#fff',
 	paddingBottom:10,
 	marginBottom:40,
-	borderBottomColor:'#199187',
+	borderBottomColor:'#199189',
 	borderBottomWidth:1,
    },
 
 	caixaEntradasTexto:{
-	alignSelf:'Stretch',
-	height:40,
-	marginBottom:30,
-	color:'#fff',
-	borderBottomColor:'#f8f8f8',
-	borderBottomWidth:1,
+    
+    padding:8,
+    marginTop:10,
+    width:300,
+    backgroundColor:'#fff',
+    fontSize:30,
+    fontWeight:'bold',
+    borderRadius:3,
+    // alignSelf:'stretch',
+	  // height:40,
+	  // marginBottom:30,
+	  // color:'#fff',
+	  //  borderBottomColor:'#f8f8f8',
+	  // borderBottomWidth:1,
 
 },
 

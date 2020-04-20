@@ -6,7 +6,8 @@ const AppStack = createStackNavigator();
 
 import Home from '../Paginas/Home';
 import Login from '../Paginas/Login';
-import Registar from '../Paginas/Login';
+import Registar from '../Paginas/Registar';
+//import componentes from '../componentes/FormRegister';
 /*
   Para organizar é só ir na pasta páginas e criar uma pasta com o nome 'Registar'
   ou qualquerum e dentro cria um index.js para colocar é só indicar o nome da pasta

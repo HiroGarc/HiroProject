@@ -16,7 +16,9 @@ import {
  
 
 import Form from '../../componentes/Form';
-import Registar from '../Registar/index';
+//import Registar from '../Registar/index';
+import FormRegister from '../../componentes/FormRegister';
+
 import {useNavigation} from '@react-navigation/native';
 
 
@@ -32,8 +34,10 @@ import {useNavigation} from '@react-navigation/native';
 
   // function Login(props) {
     return(
+          
         <View style={styles.Container}>
           <Form/>
+           {/* <FormRegister/>  */}
           <View style= {styles.signupTextCont}>
               <Text style={styles.SignupText}>Ainda Nao tem uma conta? </Text>
               <Text style={styles.SignupButon} 
@@ -49,7 +53,7 @@ import {useNavigation} from '@react-navigation/native';
 
 const styles = StyleSheet.create({
     Container: {
-   backgroundColor:"#3e3f8f",
+   backgroundColor:"#36485f",
    flex:1,
    alignItems: 'center',
    justifyContent: 'center',

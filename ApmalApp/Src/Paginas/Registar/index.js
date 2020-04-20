@@ -11,6 +11,7 @@ import {
   TouchableOpacity,
   Button,
   Alert,
+  Picker,
 
 } from 'react-native';
 
@@ -22,6 +23,10 @@ import {
 //Use a sintaxe export deafult function... transforme tudo em função
 export default function FormRegister (){
   
+  
+  const [selectedValue, setSelectedValue] = useState("cidade");
+  
+  
   // clicou =()=>{
     //   Alert.alert("tela login","clicado");
     // }
@@ -31,36 +36,54 @@ export default function FormRegister (){
     
 
       return(
-        <View style = { styles.FormRegister}>
-      
-      <Text style={styles.header}> Registo</Text>
+        <View style = { styles.container}>
+          <Picker
+        selectedValue={selectedValue}
+        style={{ height: 50, width: 150 }}
+        onValueChange={(itemValue, itemIndex) => setSelectedValue(cidade)}
+        >   
+      <Picker.Item label="escolha a cidade" value="" />
+        {/* <Picker.Item label="JavaScript" value="js" /> */}
+      <Text style={styles.header}> Cadastro</Text>
    
-	<TextInput style={styles.caixaDeEntradaTexto} placeholder="digite seu nome"
-	  underlineColorAndroid={'transaparent'}/>
+          <TextInput style={styles.caixaDeEntradaTexto} 
+          placeholder="digite seu nome"
+	        underlineColorAndroid={'transaparent'}/>
 	
 	<TextInput 
-           style={styles.caixaDeEntradaTexto} placeholder="digite seu email"
-	  underlineColorAndroid={'transaparent'}/>
+           style={styles.caixaDeEntradaTexto} 
+            placeholder="digite seu email"
+	          underlineColorAndroid={'transaparent'}/>
 	
            <TextInput 
-           style={styles.caixaDeEntradaTexto} placeholder="digite seu cidade"
-	        underlineColorAndroid={'transaparent'}/>
+           style={styles.caixaDeEntradaTexto} 
+           placeholder="digite sua cidade"
+	          underlineColorAndroid={'transaparent'}/>
              <TouchableOpacity style={styles.button}>
 	         <Text style={styles.botaoteste}> Sign up </Text>
            </TouchableOpacity>
-           
+          
+      </Picker>
            </View>
             );
         }
     
 
 const styles = StyleSheet.create({
-	FormRegister:{
-	alignSelf:'stretch',
+	container:{
+    flex:1,
+    backgroundColor:"#36485f",
+    alignSelf:'stretch',
+    //backgroundColor:"#3e3f8f",
+    //flex:1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  
+    //alignSelf:'stretch',
 },
 
   header:{
-	fontSize:24,
+	fontSize:30,
 	color:'#fff',
 	paddingBottom:10,
 	marginBottom:40,
@@ -70,7 +93,7 @@ const styles = StyleSheet.create({
 
 	caixaEntradasTexto:{
 	alignSelf:'stretch',
-	height:40,
+	height:60,
 	marginBottom:30,
 	color:'#fff',
 	borderBottomColor:'#f8f8f8',
